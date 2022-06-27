@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 import { useMapbox } from '../../hooks/useMapbox'
+import { TestInfo } from "../info-container/InfoContainer";
 import { Popup } from "../popup";
 
-const StyledContainer = styled.div`
+const StyledMapContainer = styled.div`
   width: 100%;
   min-width: 600px;
   height: 100vh;
@@ -31,7 +32,9 @@ export const Map = () => {
           {popupContent}
         </Popup>
       )}
-      <StyledContainer ref={(el) => (mapContainerRef.current = el)} />
+      <StyledMapContainer ref={(el) => (mapContainerRef.current = el)} />
+      <TestInfo />
+      
     </>
   );
 };

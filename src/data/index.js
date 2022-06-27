@@ -1,27 +1,25 @@
-import { CityStatisticsFactory } from '../utils/CityStatisticsFactory'
 
-const Kyiv = new CityStatisticsFactory({
-  coordinates: [
-    30.52675157811433, 50.414611244597324
-  ],
-  city: 'Kyiv',
-  content: 'hello Kyiv feature'
-})
+import { Vinnytsa } from './Vinnytsa'
+import { Kyiv } from './Kyiv'
+import { Zaporizhzhia } from './Zaporizhzhia'
+import { Dnipro } from './Dnipro'
+import { Zhytomyr } from './Zhytomyr'
+import { Uzhhorod } from './Uzhhorod'
+import { Odesa } from './Odesa'
+import { Kharkiv } from './Kharkiv'
+import { Lutsk } from './Lutsk'
 
-
-const Vinnytsa = new CityStatisticsFactory({
-  coordinates: [
-    28.513156561836155, 49.188618041051
-
-  ],
-  city: 'Vinnytsa',
-  content: 'hello Vinnytsa feature'
-})
-
-export const data = {
+export const MapPoints = {
   'type': 'FeatureCollection',
   'features': [
+      Zaporizhzhia,
       Kyiv,
-      Vinnytsa
+      Vinnytsa,
+      Dnipro,
+      Zhytomyr,
+      Uzhhorod,
+      Odesa,
+      Kharkiv,
+      Lutsk
   ]
 }

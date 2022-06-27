@@ -1,0 +1,11 @@
+.growth {
+  color: green;
+}
+
+.fall {
+  color: crimson;
+}
+
+.mapboxgl-popup{
+  max-width: 350px !important;
+}

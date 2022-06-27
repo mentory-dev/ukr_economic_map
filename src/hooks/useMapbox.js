@@ -7,7 +7,7 @@ import React, {
 import mapboxgl from "mapbox-gl"; // eslint-disable-line
 import "mapbox-gl/dist/mapbox-gl.css";
 
-import { data } from '../data'
+import { MapPoints } from '../data'
 import { mapContext } from '../context/mapContext'
 import { PopupContent } from '../components/popup'
 import { 
@@ -52,7 +52,7 @@ export const useMapbox = () => {
 
                 map.addSource(POINTER_LAYER_NAME, {
                     type: 'geojson',
-                    data
+                    data: MapPoints
                 });
 
                 map.addLayer(ADD_LAYER_BASE);

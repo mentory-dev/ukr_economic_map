@@ -1,2 +1,2 @@
 export {Popup} from './Popup'
-export {PopupContent} from './PopupContent'
+export * from './PopupContent'

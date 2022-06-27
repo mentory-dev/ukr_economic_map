@@ -15,7 +15,15 @@ export class CityStatisticsFactory {
     this.properties = {
       id: uuidv4(),
       [POINTER_NAME]: city,
-      content
+      content,
+      opacity: this.calculateOpacity(content)
     }
+  }
+
+  calculateOpacity({results}) {
+    const positive = results.reduce((acc, {isGrowth}) => acc += Number(isGrowth), 0);
+    const opacity = positive / results.length
+    const res = opacity.toFixed(2)
+    return Number(res)
   }
 }
